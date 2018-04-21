@@ -1,4 +1,4 @@
-package com.OTG.rampant.engine;
+package com.OTG.rampant.engine.components;
 
 import static org.lwjgl.opengl.GL11.*;
 

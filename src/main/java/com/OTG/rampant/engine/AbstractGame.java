@@ -2,6 +2,8 @@ package com.OTG.rampant.engine;
 
 import java.util.ArrayList;
 
+import com.OTG.rampant.input.MouseInput;
+
 public abstract class AbstractGame {
 	
 	protected int width, height;
@@ -9,6 +11,10 @@ public abstract class AbstractGame {
 	protected MouseInput mouse;
 	
 	protected ArrayList<GameObject> objects;
+	
+	public abstract void update(float interval);
+	
+	//Implements
 	
 	public AbstractGame(int width, int height) {
 		this.width = width;
@@ -18,8 +24,6 @@ public abstract class AbstractGame {
 	public void init() {
 		objects = new ArrayList<GameObject>();
 	}
-
-	public abstract void update(float interval);
 	
 	public void render() {
 		for (GameObject o : objects) {

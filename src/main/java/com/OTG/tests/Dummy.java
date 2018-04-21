@@ -3,7 +3,7 @@ package com.OTG.tests;
 import java.util.Random;
 
 import com.OTG.rampant.engine.GameObject;
-import com.OTG.rampant.engine.RenderComponent;
+import com.OTG.rampant.engine.components.RenderComponent;
 
 public class Dummy extends GameObject {
 

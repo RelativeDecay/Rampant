@@ -8,6 +8,9 @@ import static org.lwjgl.opengl.GL11.glClear;
 
 import java.util.ArrayList;
 
+import com.OTG.rampant.engine.util.Timer;
+import com.OTG.rampant.engine.util.Window;
+
 public class Engine implements Runnable {
 
 	public static final int TARGET_FPS = 60;
@@ -48,6 +51,15 @@ public class Engine implements Runnable {
 		}
 	}
 
+	private void init() throws Exception {
+		window.init();
+		game.setWindow(window.getWindow());
+		timer.init();
+		lastFps = timer.getTime();
+		fps = 0;
+		game.init();
+	}
+	
 	public synchronized void stop() {
 		//TODO: Implement cleanup
 	}
@@ -89,12 +101,6 @@ public class Engine implements Runnable {
 		}
 	}
 
-	private void input() {
-		// TODO Need Keyboard/Mouse input class
-		game.getMouse().update();
-		
-	}
-
 	private void update(float interval) {
 		game.update(interval);
 	}
@@ -116,6 +122,12 @@ public class Engine implements Runnable {
 
 	}
 
+	private void input() {
+		// TODO Need Keyboard/Mouse input class
+		game.getMouse().update();
+		
+	}
+	
 	private void sync() {
 		float loopSlot = 1f / TARGET_FPS;
 		double endTime = timer.getLastLoopTime() + loopSlot;
@@ -132,13 +144,6 @@ public class Engine implements Runnable {
 
 	}
 
-	private void init() throws Exception {
-		window.init();
-		game.setWindow(window.getWindow());
-		timer.init();
-		lastFps = timer.getTime();
-		fps = 0;
-		game.init();
-	}
+
 
 }

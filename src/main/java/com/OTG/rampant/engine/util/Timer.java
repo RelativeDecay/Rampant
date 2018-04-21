@@ -1,4 +1,4 @@
-package com.OTG.rampant.engine;
+package com.OTG.rampant.engine.util;
 
 public class Timer {
 

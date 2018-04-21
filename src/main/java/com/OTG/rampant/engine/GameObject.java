@@ -4,6 +4,8 @@ import static org.lwjgl.opengl.GL11.*;
 
 import java.util.ArrayList;
 
+import com.OTG.rampant.engine.components.Component;
+
 public abstract class GameObject {
 
 	protected float x, y;

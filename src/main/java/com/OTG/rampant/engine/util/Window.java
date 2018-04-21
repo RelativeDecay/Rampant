@@ -1,4 +1,4 @@
-package com.OTG.rampant.engine;
+package com.OTG.rampant.engine.util;
 
 import org.lwjgl.*;
 import org.lwjgl.glfw.*;
