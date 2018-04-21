@@ -14,7 +14,7 @@ public class TestGame extends AbstractGame {
 	@Override
 	public void init() {
 		super.init();
-		for (int i = 0; i < 20000; i++) {
+		for (int i = 0; i < 3; i++) {
 			objects.add(new Dummy(width / 2, height / 2));
 		}
 	}
